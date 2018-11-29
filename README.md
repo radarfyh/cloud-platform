@@ -17,7 +17,7 @@
 （1）准备Docker环境
 
 （2）克隆完整代码
-git clone https://github.com/cloudframeworks-springcloud/PiggyMetrics
+git clone https://github.com/radarfyh/cloud-platform.git
 （3）设置环境变量
 export CONFIG_SERVICE_PASSWORD=123456
 export NOTIFICATION_SERVICE_PASSWORD=123456
