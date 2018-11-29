@@ -1,0 +1,27 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.13:8761/eureka/
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://192.168.1.13:5000/ac/users/current
+
+spring:
+  rabbitmq:
+    host: 192.168.1.13
+    username: edison
+    password: 123456

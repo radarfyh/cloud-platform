@@ -1,0 +1,9 @@
+rootProject.name = 'cloud-platform'
+
+include 'config-center'
+include 'registration-center'
+include 'gateway'
+include 'authentication-center'
+include 'hystrix-dashboard'
+include 'monitoring-center'
+include 'account-service'

@@ -1,0 +1,65 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+	group = 'com.jiaxiaomei.edison'
+	baseName = 'registration-center'
+	version = '0.0.1-SNAPSHOT'
+	description = "registration center for JiaXiaoMei Cloud Platform project for Spring Boot"
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version:'2.0.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version:'2.0.2.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.1.0.RELEASE'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Finchley.SR2'
+	}
+}
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+repositories {
+	maven { url 'https://repo.spring.io/libs-snapshot' }
+}
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+}
+
+eclipse {
+	classpath {
+		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+	}
+}

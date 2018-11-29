@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      host: 192.168.1.13
+      username: hunter
+      password: abcdef
+      database: securitydb
+      port: 27017
+
+server:
+  servlet:
+    context-path: /ac
+  port: 5000

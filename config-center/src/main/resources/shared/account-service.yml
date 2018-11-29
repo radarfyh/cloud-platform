@@ -1,0 +1,26 @@
+security:
+  oauth2:
+    client:
+      clientId: account-service
+      clientSecret: 123456
+      accessTokenUri: http://authentication-center:5000/ac/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+spring:
+  data:
+    mongodb:
+      host: 192.168.1.13
+      username: hunter
+      password: abcdef
+      database: securitydb
+      port: 27017
+
+server:
+  servlet:
+    context-path: /accounts
+  port: 6000
+
+feign:
+  hystrix:
+    enabled: true

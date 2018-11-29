@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: registration-center
+  cloud:
+    config:
+      uri: http://192.168.1.13:8888
+      fail-fast: true
+      password: 123456
+      username: edison
+  jmx:
+    default-domain: registration-center
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: monitoring-center
+  cloud:
+    config:
+      uri: http://192.168.1.13:8888
+      fail-fast: true
+      password: 123456
+      username: edison
+
+management:
+  server:
+    port: 12011
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+      
+turbine:
+  app-config: hystrix-test
+  cluster-name-expression: new String("default")
+  combine-host-port: true

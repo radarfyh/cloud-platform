@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      uri: http://192.168.1.13:8888
+      fail-fast: true
+      password: 123456
+      username: edison

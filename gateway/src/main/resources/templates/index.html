@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta content="text/html;charset=UTF-8" />
+<title>Spring Security Example</title>
+<link rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+<style type="text/css">
+body {
+	padding-top: 50px;
+}
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Spring Security Example</a>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+		<div class="starter-template">
+			<h1>Welcome!</h1>
+
+			<p class="bg-primary" >This is a test for Spring Security</p>
+			<p class="bg-info">Click <a th:href="@{/greeting}">here</a> to see a greeting.</p>
+		</div>
+	</div>	
+</body>
+</html>
