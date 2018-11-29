@@ -4,15 +4,16 @@
 自制平台：构建cloud-platform多模块项目用于搭建初始开发环境。
 使用FileNewSpring Starter Project创建多模块项目，修改pom.xml，并删除多余的源文件:
  
-接下来使用FileNewSpring Starter Project分别创建：
+接下来使用File-->New-->Spring Starter Project分别创建：
 
-	注册中心registration-center
-	网关gateway
-	配置中心config-center
-	认证中心authentication-center
-	认证中心monitoring-center
-	仪表盘hystrix-dashboard
-	示例服务account-service
+* 注册中心registration-center
+* 网关gateway
+* 配置中心config-center
+* 认证中心authentication-center
+* 认证中心monitoring-center
+* 表盘hystrix-dashboard
+* 示例服务account-service
+* 单元测试示例rabbitmq-test
 
 把这几个项目的目录移到cloud-platform目录下。
 
